@@ -7,3 +7,7 @@ This is a README
 ## Contact 
 
 me
+
+## French 
+
+Voila un README
