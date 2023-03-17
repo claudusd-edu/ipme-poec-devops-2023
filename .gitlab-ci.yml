@@ -39,3 +39,17 @@ test-integration:
   tags:
     - claude
 
+build-docker-image:
+  script: 
+    - echo "docker build image"
+    - echo "docker push image"
+  stage: release
+  tags:
+    - claude
+
+deploy-docker:
+  script: 
+    - echo "helm install"
+  stage: deploy
+  tags:
+    - claude
