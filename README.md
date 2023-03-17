@@ -20,3 +20,6 @@ Esta una README
 
 AZERCB?LK README
 
+## Portuges
+
+Este é um LEIA-ME
