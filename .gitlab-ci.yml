@@ -61,6 +61,8 @@ build-docker-image:
   stage: release
   tags:
     - claude
+  only:
+    - master
 
 deploy-docker:
   script: 
@@ -68,3 +70,5 @@ deploy-docker:
   stage: deploy
   tags:
     - claude
+  only:
+    - master
