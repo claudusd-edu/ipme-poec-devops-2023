@@ -1,10 +1,10 @@
 stages:
   - "build"
   - "test"
+  - "quality"
+  - "security"
   - "release"
   - "deploy"
-  - "operate"
-  - "monitor"
 
 build-java-8:
   script: echo "Build Java 8"
@@ -24,6 +24,21 @@ build-java-20:
     - exit 2
   stage: build
   allow_failure: true
+  tags:
+    - claude
+
+quality-code-analyzer:
+  script: 
+    - echo "Rune code quality analyzer"
+  stage: quality
+  allow_failure: true
+  tags:
+    - claude
+
+security-cve-checker:
+  script: 
+    - echo "Check CVE"
+  stage: security
   tags:
     - claude
 
