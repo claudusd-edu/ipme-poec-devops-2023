@@ -1,0 +1,70 @@
+stages:
+  - "build"
+  - "test"
+  - "quality"
+  - "security"
+  - "release"
+  - "deploy"
+
+build-java-8:
+  script: echo "Build Java 8"
+  stage: build
+  tags:
+    - claude
+
+build-java-9:
+  script: echo "Build Java 9"
+  stage: build
+  tags:
+    - claude
+
+build-java-20:
+  script: 
+    - echo "Build Java 20"
+    - exit 2
+  stage: build
+  allow_failure: true
+  tags:
+    - claude
+
+quality-code-analyzer:
+  script: 
+    - echo "Rune code quality analyzer"
+  stage: quality
+  allow_failure: true
+  tags:
+    - claude
+
+security-cve-checker:
+  script: 
+    - echo "Check CVE"
+  stage: security
+  tags:
+    - claude
+
+test-unit:
+  script: echo "run unit test"
+  stage: test
+  tags:
+    - claude
+
+test-integration:
+  script: echo "run integration test"
+  stage: test
+  tags:
+    - claude
+
+build-docker-image:
+  script: 
+    - echo "docker build image"
+    - echo "docker push image"
+  stage: release
+  tags:
+    - claude
+
+deploy-docker:
+  script: 
+    - echo "helm install"
+  stage: deploy
+  tags:
+    - claude
