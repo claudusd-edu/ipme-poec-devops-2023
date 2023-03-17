@@ -23,3 +23,8 @@ AZERCB?LK README
 ## Portuges
 
 Este é um LEIA-ME
+
+## Chiness
+
+这是一个自述文件
+
