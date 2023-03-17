@@ -6,8 +6,20 @@ stages:
   - "operate"
   - "monitor"
 
-build-java:
-  script: echo "Build Java"
+build-java-8:
+  script: echo "Build Java 8"
+  stage: build
+  tags:
+    - claude
+
+build-java-9:
+  script: echo "Build Java 9"
+  stage: build
+  tags:
+    - claude
+
+build-java-20:
+  script: echo "Build Java 20"
   stage: build
   tags:
     - claude
