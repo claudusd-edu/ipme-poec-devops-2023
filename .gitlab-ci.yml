@@ -1,0 +1,13 @@
+stages:
+  - "build"
+  - "test"
+  - "release"
+  - "deploy"
+  - "operate"
+  - "monitor"
+
+build-java:
+  script: echo "Build Java"
+  stage: build
+  tags:
+    - claude
