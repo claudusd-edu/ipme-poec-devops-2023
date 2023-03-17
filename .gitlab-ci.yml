@@ -23,3 +23,15 @@ build-java-20:
   stage: build
   tags:
     - claude
+
+test-unit:
+  script: run unit test
+  stage: test
+  tags:
+    - claude
+
+test-integration:
+  script: run integration test
+  stage: test
+  tags:
+    - claude
