@@ -19,8 +19,11 @@ build-java-9:
     - claude
 
 build-java-20:
-  script: echo "Build Java 20"
+  script: 
+    - echo "Build Java 20"
+    - exit 2
   stage: build
+  allow_failure: true
   tags:
     - claude
 
@@ -35,3 +38,4 @@ test-integration:
   stage: test
   tags:
     - claude
+
