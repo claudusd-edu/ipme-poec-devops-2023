@@ -1,0 +1,37 @@
+stages:
+  - "build"
+  - "test"
+  - "release"
+  - "deploy"
+  - "operate"
+  - "monitor"
+
+build-java-8:
+  script: echo "Build Java 8"
+  stage: build
+  tags:
+    - claude
+
+build-java-9:
+  script: echo "Build Java 9"
+  stage: build
+  tags:
+    - claude
+
+build-java-20:
+  script: echo "Build Java 20"
+  stage: build
+  tags:
+    - claude
+
+test-unit:
+  script: run unit test
+  stage: test
+  tags:
+    - claude
+
+test-integration:
+  script: run integration test
+  stage: test
+  tags:
+    - claude
